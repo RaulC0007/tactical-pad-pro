@@ -1,0 +1,161 @@
+minute,type,player,team,pass_recipient,location,shot_outcome
+82,Pass,Dwight Yorke,Manchester United,Andy Cole,"[65, 46]",
+51,Pass,Dwight Yorke,Manchester United,Andy Cole,"[78, 21]",
+81,Pass,Dwight Yorke,Manchester United,Andy Cole,"[71, 43]",
+4,Pass,Dwight Yorke,Manchester United,Andy Cole,"[58, 50]",
+76,Pass,Dwight Yorke,Manchester United,Andy Cole,"[73, 32]",
+34,Pass,Dwight Yorke,Manchester United,Andy Cole,"[73, 40]",
+67,Pass,Dwight Yorke,Manchester United,Andy Cole,"[77, 25]",
+13,Pass,Dwight Yorke,Manchester United,Andy Cole,"[73, 38]",
+46,Pass,Dwight Yorke,Manchester United,Andy Cole,"[76, 54]",
+2,Pass,Dwight Yorke,Manchester United,Andy Cole,"[64, 41]",
+6,Pass,Dwight Yorke,Manchester United,Andy Cole,"[74, 35]",
+60,Pass,Dwight Yorke,Manchester United,Andy Cole,"[67, 29]",
+8,Pass,Dwight Yorke,Manchester United,Andy Cole,"[75, 22]",
+31,Pass,Dwight Yorke,Manchester United,Andy Cole,"[66, 41]",
+76,Pass,Dwight Yorke,Manchester United,Andy Cole,"[57, 49]",
+7,Pass,Dwight Yorke,Manchester United,Andy Cole,"[58, 32]",
+44,Pass,Dwight Yorke,Manchester United,Andy Cole,"[63, 24]",
+84,Pass,Dwight Yorke,Manchester United,Andy Cole,"[59, 36]",
+67,Pass,Dwight Yorke,Manchester United,Andy Cole,"[68, 47]",
+28,Pass,Dwight Yorke,Manchester United,Andy Cole,"[50, 23]",
+18,Pass,Dwight Yorke,Manchester United,Andy Cole,"[75, 54]",
+87,Pass,Dwight Yorke,Manchester United,Andy Cole,"[54, 47]",
+8,Pass,Dwight Yorke,Manchester United,Andy Cole,"[79, 54]",
+78,Pass,Dwight Yorke,Manchester United,Andy Cole,"[74, 39]",
+56,Pass,Dwight Yorke,Manchester United,Andy Cole,"[75, 32]",
+13,Pass,Dwight Yorke,Manchester United,Andy Cole,"[75, 50]",
+57,Pass,Dwight Yorke,Manchester United,Andy Cole,"[62, 21]",
+72,Pass,Dwight Yorke,Manchester United,Andy Cole,"[62, 43]",
+68,Pass,Dwight Yorke,Manchester United,Andy Cole,"[78, 47]",
+76,Pass,Dwight Yorke,Manchester United,Andy Cole,"[57, 55]",
+44,Pass,Dwight Yorke,Manchester United,Andy Cole,"[55, 44]",
+47,Pass,Dwight Yorke,Manchester United,Andy Cole,"[51, 45]",
+35,Pass,Dwight Yorke,Manchester United,Andy Cole,"[58, 35]",
+52,Pass,Dwight Yorke,Manchester United,Andy Cole,"[75, 46]",
+74,Pass,Dwight Yorke,Manchester United,Andy Cole,"[76, 35]",
+60,Pass,Dwight Yorke,Manchester United,Andy Cole,"[71, 23]",
+81,Pass,Dwight Yorke,Manchester United,Andy Cole,"[72, 27]",
+67,Pass,Dwight Yorke,Manchester United,Andy Cole,"[54, 34]",
+64,Pass,Dwight Yorke,Manchester United,Andy Cole,"[51, 35]",
+68,Pass,Dwight Yorke,Manchester United,Andy Cole,"[59, 30]",
+65,Pass,Dwight Yorke,Manchester United,Andy Cole,"[69, 54]",
+4,Pass,Dwight Yorke,Manchester United,Andy Cole,"[73, 29]",
+50,Pass,Dwight Yorke,Manchester United,Andy Cole,"[52, 49]",
+7,Pass,Dwight Yorke,Manchester United,Andy Cole,"[67, 43]",
+51,Pass,Dwight Yorke,Manchester United,Andy Cole,"[70, 45]",
+9,Pass,Andy Cole,Manchester United,Dwight Yorke,"[62, 56]",
+45,Pass,Andy Cole,Manchester United,Dwight Yorke,"[67, 53]",
+83,Pass,Andy Cole,Manchester United,Dwight Yorke,"[72, 46]",
+21,Pass,Andy Cole,Manchester United,Dwight Yorke,"[54, 47]",
+55,Pass,Andy Cole,Manchester United,Dwight Yorke,"[53, 29]",
+51,Pass,Andy Cole,Manchester United,Dwight Yorke,"[79, 44]",
+50,Pass,Andy Cole,Manchester United,Dwight Yorke,"[58, 24]",
+2,Pass,Andy Cole,Manchester United,Dwight Yorke,"[72, 51]",
+77,Pass,Andy Cole,Manchester United,Dwight Yorke,"[73, 23]",
+14,Pass,Andy Cole,Manchester United,Dwight Yorke,"[69, 46]",
+75,Pass,Andy Cole,Manchester United,Dwight Yorke,"[77, 24]",
+41,Pass,Andy Cole,Manchester United,Dwight Yorke,"[65, 49]",
+25,Pass,Andy Cole,Manchester United,Dwight Yorke,"[53, 49]",
+41,Pass,Andy Cole,Manchester United,Dwight Yorke,"[69, 55]",
+4,Pass,Andy Cole,Manchester United,Dwight Yorke,"[67, 31]",
+50,Pass,Andy Cole,Manchester United,Dwight Yorke,"[62, 39]",
+11,Pass,Andy Cole,Manchester United,Dwight Yorke,"[69, 49]",
+38,Pass,Andy Cole,Manchester United,Dwight Yorke,"[57, 20]",
+15,Pass,Andy Cole,Manchester United,Dwight Yorke,"[79, 41]",
+36,Pass,Andy Cole,Manchester United,Dwight Yorke,"[63, 29]",
+39,Pass,Andy Cole,Manchester United,Dwight Yorke,"[72, 25]",
+19,Pass,Andy Cole,Manchester United,Dwight Yorke,"[52, 59]",
+32,Pass,Andy Cole,Manchester United,Dwight Yorke,"[65, 56]",
+69,Pass,Andy Cole,Manchester United,Dwight Yorke,"[67, 29]",
+20,Pass,Andy Cole,Manchester United,Dwight Yorke,"[58, 42]",
+21,Pass,Andy Cole,Manchester United,Dwight Yorke,"[62, 42]",
+42,Pass,Andy Cole,Manchester United,Dwight Yorke,"[58, 51]",
+77,Pass,Andy Cole,Manchester United,Dwight Yorke,"[51, 46]",
+41,Pass,Andy Cole,Manchester United,Dwight Yorke,"[67, 45]",
+2,Pass,Andy Cole,Manchester United,Dwight Yorke,"[53, 44]",
+87,Pass,Andy Cole,Manchester United,Dwight Yorke,"[62, 44]",
+18,Pass,Andy Cole,Manchester United,Dwight Yorke,"[58, 27]",
+8,Pass,Andy Cole,Manchester United,Dwight Yorke,"[55, 30]",
+14,Pass,Andy Cole,Manchester United,Dwight Yorke,"[67, 34]",
+3,Pass,Andy Cole,Manchester United,Dwight Yorke,"[62, 40]",
+20,Shot,Dwight Yorke,Manchester United,,"[105, 42]",Goal
+70,Shot,Dwight Yorke,Manchester United,,"[105, 30]",Goal
+17,Shot,Dwight Yorke,Manchester United,,"[109, 49]",Goal
+16,Shot,Dwight Yorke,Manchester United,,"[102, 48]",Goal
+44,Shot,Dwight Yorke,Manchester United,,"[96, 36]",Goal
+61,Shot,Dwight Yorke,Manchester United,,"[88, 45]",Goal
+45,Shot,Dwight Yorke,Manchester United,,"[89, 49]",Goal
+69,Shot,Dwight Yorke,Manchester United,,"[100, 45]",Goal
+5,Shot,Dwight Yorke,Manchester United,,"[92, 48]",Goal
+57,Shot,Dwight Yorke,Manchester United,,"[96, 37]",Goal
+60,Shot,Dwight Yorke,Manchester United,,"[94, 37]",Goal
+68,Shot,Dwight Yorke,Manchester United,,"[91, 37]",Goal
+87,Shot,Dwight Yorke,Manchester United,,"[105, 43]",Goal
+10,Shot,Dwight Yorke,Manchester United,,"[91, 30]",Goal
+60,Shot,Dwight Yorke,Manchester United,,"[99, 44]",Goal
+73,Shot,Dwight Yorke,Manchester United,,"[110, 38]",Goal
+72,Shot,Dwight Yorke,Manchester United,,"[98, 44]",Goal
+54,Shot,Dwight Yorke,Manchester United,,"[91, 45]",Goal
+62,Shot,Dwight Yorke,Manchester United,,"[86, 69]",Off Target
+39,Shot,Dwight Yorke,Manchester United,,"[100, 13]",Off Target
+29,Shot,Dwight Yorke,Manchester United,,"[97, 46]",Off Target
+37,Shot,Dwight Yorke,Manchester United,,"[96, 51]",Off Target
+3,Shot,Dwight Yorke,Manchester United,,"[87, 37]",Off Target
+57,Shot,Dwight Yorke,Manchester United,,"[83, 42]",Off Target
+17,Shot,Dwight Yorke,Manchester United,,"[101, 58]",Off Target
+67,Shot,Dwight Yorke,Manchester United,,"[101, 63]",Off Target
+5,Shot,Dwight Yorke,Manchester United,,"[95, 66]",Off Target
+31,Shot,Dwight Yorke,Manchester United,,"[108, 60]",Off Target
+37,Shot,Dwight Yorke,Manchester United,,"[80, 19]",Off Target
+7,Shot,Dwight Yorke,Manchester United,,"[88, 50]",Off Target
+49,Shot,Dwight Yorke,Manchester United,,"[95, 13]",Off Target
+12,Shot,Dwight Yorke,Manchester United,,"[86, 47]",Off Target
+81,Shot,Dwight Yorke,Manchester United,,"[96, 50]",Off Target
+69,Shot,Dwight Yorke,Manchester United,,"[91, 21]",Off Target
+54,Shot,Dwight Yorke,Manchester United,,"[105, 34]",Off Target
+29,Shot,Dwight Yorke,Manchester United,,"[109, 59]",Off Target
+30,Shot,Dwight Yorke,Manchester United,,"[112, 14]",Off Target
+56,Shot,Dwight Yorke,Manchester United,,"[111, 14]",Off Target
+53,Shot,Dwight Yorke,Manchester United,,"[89, 33]",Off Target
+15,Shot,Dwight Yorke,Manchester United,,"[106, 46]",Off Target
+4,Shot,Dwight Yorke,Manchester United,,"[101, 61]",Off Target
+83,Shot,Dwight Yorke,Manchester United,,"[78, 42]",Off Target
+29,Shot,Dwight Yorke,Manchester United,,"[112, 60]",Off Target
+59,Shot,Andy Cole,Manchester United,,"[97, 35]",Goal
+71,Shot,Andy Cole,Manchester United,,"[91, 40]",Goal
+74,Shot,Andy Cole,Manchester United,,"[110, 49]",Goal
+32,Shot,Andy Cole,Manchester United,,"[96, 33]",Goal
+28,Shot,Andy Cole,Manchester United,,"[113, 32]",Goal
+7,Shot,Andy Cole,Manchester United,,"[89, 49]",Goal
+64,Shot,Andy Cole,Manchester United,,"[91, 38]",Goal
+17,Shot,Andy Cole,Manchester United,,"[109, 35]",Goal
+38,Shot,Andy Cole,Manchester United,,"[113, 46]",Goal
+22,Shot,Andy Cole,Manchester United,,"[110, 49]",Goal
+81,Shot,Andy Cole,Manchester United,,"[105, 35]",Goal
+29,Shot,Andy Cole,Manchester United,,"[88, 39]",Goal
+61,Shot,Andy Cole,Manchester United,,"[96, 42]",Goal
+7,Shot,Andy Cole,Manchester United,,"[112, 47]",Goal
+19,Shot,Andy Cole,Manchester United,,"[110, 48]",Goal
+66,Shot,Andy Cole,Manchester United,,"[94, 40]",Goal
+60,Shot,Andy Cole,Manchester United,,"[96, 30]",Goal
+11,Shot,Andy Cole,Manchester United,,"[91, 53]",Saved
+81,Shot,Andy Cole,Manchester United,,"[89, 32]",Saved
+54,Shot,Andy Cole,Manchester United,,"[89, 15]",Saved
+39,Shot,Andy Cole,Manchester United,,"[80, 44]",Saved
+79,Shot,Andy Cole,Manchester United,,"[106, 40]",Saved
+30,Shot,Andy Cole,Manchester United,,"[99, 19]",Saved
+14,Shot,Andy Cole,Manchester United,,"[82, 27]",Saved
+22,Shot,Andy Cole,Manchester United,,"[79, 62]",Saved
+4,Shot,Andy Cole,Manchester United,,"[108, 63]",Saved
+6,Shot,Andy Cole,Manchester United,,"[95, 49]",Saved
+5,Shot,Andy Cole,Manchester United,,"[82, 13]",Saved
+64,Shot,Andy Cole,Manchester United,,"[111, 65]",Saved
+25,Shot,Andy Cole,Manchester United,,"[85, 67]",Saved
+65,Shot,Andy Cole,Manchester United,,"[98, 43]",Saved
+19,Shot,Andy Cole,Manchester United,,"[108, 17]",Saved
+43,Shot,Andy Cole,Manchester United,,"[95, 49]",Saved
+31,Shot,Andy Cole,Manchester United,,"[89, 39]",Saved
+88,Shot,Andy Cole,Manchester United,,"[78, 24]",Saved
+46,Shot,Andy Cole,Manchester United,,"[94, 67]",Saved
+66,Shot,Andy Cole,Manchester United,,"[112, 43]",Saved

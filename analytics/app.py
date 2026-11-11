@@ -38,7 +38,7 @@ matches_df, events_df = load_data()
 st.sidebar.title("🎯 Navegación")
 page = st.sidebar.radio(
     "Selecciona una sección:",
-    ["📊 Resumen del Partido", "⚽ Análisis de Eventos", "🎯 Mapa de Tiros", "👥 Comparación de Equipos"]
+    ["📊 Resumen del Partido", "⚽ Análisis de Eventos", "🎯 Mapa de Tiros", "👥 Comparación de Equipos", "👑 Cole & Yorke 98/99"]
 )
 
 st.sidebar.markdown("---")
