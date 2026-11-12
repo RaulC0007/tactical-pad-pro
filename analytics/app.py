@@ -70,7 +70,6 @@ if page == "📊 Resumen del Partido":
     
     st.markdown("---")
     
-    # Distribución de eventos por tipo
     st.subheader("📈 Distribución de Eventos por Tipo")
     event_counts = events_df['type'].value_counts().head(10)
     
@@ -88,7 +87,6 @@ if page == "📊 Resumen del Partido":
     
     st.markdown("---")
     
-    # Timeline de eventos
     st.subheader("⏱️ Timeline de Eventos por Minuto")
     events_by_minute = events_df.groupby('minute').size().reset_index(name='count')
     
@@ -108,7 +106,6 @@ if page == "📊 Resumen del Partido":
 elif page == "⚽ Análisis de Eventos":
     st.header("⚽ Análisis Detallado de Eventos")
     
-    # Filtros
     col1, col2 = st.columns(2)
     
     with col1:
@@ -123,7 +120,6 @@ elif page == "⚽ Análisis de Eventos":
             ["Todos"] + events_df['type'].value_counts().head(10).index.tolist()
         )
     
-    # Aplicar filtros
     filtered_events = events_df.copy()
     
     if selected_team != "Todos":
@@ -134,7 +130,6 @@ elif page == "⚽ Análisis de Eventos":
     
     st.markdown(f"**Eventos filtrados:** {len(filtered_events):,}")
     
-    # Gráfico de eventos por equipo
     st.subheader("📊 Eventos por Equipo")
     team_events = filtered_events['team'].value_counts()
     
@@ -146,7 +141,6 @@ elif page == "⚽ Análisis de Eventos":
     )
     st.plotly_chart(fig_teams, use_container_width=True)
     
-    # Tabla de eventos
     st.subheader("📋 Tabla de Eventos (últimos 50)")
     display_cols = ['minute', 'second', 'type', 'player', 'team']
     st.dataframe(filtered_events[display_cols].tail(50), use_container_width=True)
@@ -157,12 +151,9 @@ elif page == "⚽ Análisis de Eventos":
 elif page == "🎯 Mapa de Tiros":
     st.header("🎯 Mapa de Tiros - Final Champions 2019")
     
-    # Filtrar solo tiros
     shots = events_df[events_df['type'] == 'Shot'].copy()
-    
     st.markdown(f"**Total de tiros en el partido:** {len(shots)}")
     
-    # Selector de equipo
     team_filter = st.radio(
         "Selecciona equipo:",
         ["Todos", "Tottenham Hotspur", "Liverpool"],
@@ -172,10 +163,8 @@ elif page == "🎯 Mapa de Tiros":
     if team_filter != "Todos":
         shots = shots[shots['team'] == team_filter]
     
-    # Crear mapa de tiros
     fig_shots = go.Figure()
     
-    # Dibujar cancha (simplificada)
     fig_shots.add_shape(
         type="rect",
         x0=0, y0=0, x1=120, y1=80,
@@ -184,7 +173,6 @@ elif page == "🎯 Mapa de Tiros":
         opacity=0.3
     )
     
-    # Agregar tiros
     for idx, shot in shots.iterrows():
         if pd.notna(shot.get('location')):
             try:
@@ -222,7 +210,6 @@ elif page == "🎯 Mapa de Tiros":
     
     st.plotly_chart(fig_shots, use_container_width=True)
     
-    # Estadísticas de tiros
     st.subheader("📊 Estadísticas de Tiros")
     col1, col2, col3 = st.columns(3)
     
@@ -244,10 +231,7 @@ elif page == "🎯 Mapa de Tiros":
 elif page == "👥 Comparación de Equipos":
     st.header("👥 Comparación: Tottenham vs Liverpool")
     
-    # Eventos por equipo
     team_stats = events_df.groupby('team').size().reset_index(name='total_events')
-    
-    # Tipos de eventos por equipo
     event_by_team = events_df.groupby(['team', 'type']).size().reset_index(name='count')
     
     col1, col2 = st.columns(2)
@@ -282,7 +266,6 @@ elif page == "👥 Comparación de Equipos":
     
     st.markdown("---")
     
-    # Tabla comparativa detallada
     st.subheader("📋 Tabla Comparativa Detallada")
     pivot_table = event_by_team.pivot(index='type', columns='team', values='count').fillna(0).astype(int)
     st.dataframe(pivot_table, use_container_width=True)
@@ -294,7 +277,6 @@ elif page == "👑 Cole & Yorke 98/99":
     st.header("👑 La Dupla Legendaria: Andy Cole & Dwight Yorke (1998/1999)")
     st.markdown("Protagonistas del Triplete del Manchester United. Datos históricos reconstruidos a nivel de evento.")
     
-    # Cargar datos específicos
     cy_file = data_dir / "cole_yorke_99_events.csv"
     if cy_file.exists():
         cy_df = pd.read_csv(cy_file)
@@ -310,16 +292,15 @@ elif page == "👑 Cole & Yorke 98/99":
         st.markdown("---")
         st.subheader("🎯 Mapa de Tiros de la Dupla")
         
-        # Filtrar solo tiros
         shots = cy_df[cy_df['type'] == 'Shot']
         
         fig_cy = go.Figure()
         
-        # Dibujar media cancha (ataque)
         fig_cy.add_shape(type="rect", x0=60, y0=0, x1=120, y1=80,
                          line=dict(color="white", width=2), fillcolor="green", opacity=0.3)
         fig_cy.add_shape(type="rect", x0=103.5, y0=21.1, x1=120, y1=58.9,
                          line=dict(color="white", width=2))
+        
         for idx, shot in shots.iterrows():
             try:
                 import ast
@@ -327,16 +308,21 @@ elif page == "👑 Cole & Yorke 98/99":
                 x, y = location[0], location[1]
                 color = '#FFD700' if shot['shot_outcome'] == 'Goal' else '#FF4444'
                 size = 12 if shot['shot_outcome'] == 'Goal' else 6
-                
+
+                # Crear un nombre único para el grupo (soluciona la leyenda repetida)
+                legend_name = f"{shot['player']} - {shot['shot_outcome']}"
+
                 fig_cy.add_trace(go.Scatter(
                     x=[x], y=[y], mode='markers',
                     marker=dict(size=size, color=color, symbol='circle', line=dict(color='black', width=1)),
-                    name=f"{shot['player']} - {shot['shot_outcome']}",
+                    name=legend_name,
+                    legendgroup=legend_name,
+                    showlegend=(idx == 0),
                     hovertext=f"Jugador: {shot['player']}<br>Minuto: {shot['minute']}<br>Resultado: {shot['shot_outcome']}"
                 ))
             except:
                 pass
-        
+                
         fig_cy.update_layout(
             title='Ubicación de los 35 goles y tiros de Cole & Yorke',
             xaxis=dict(range=[60, 120], showgrid=False, zeroline=False),
