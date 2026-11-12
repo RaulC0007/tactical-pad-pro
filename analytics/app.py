@@ -319,8 +319,7 @@ elif page == "👑 Cole & Yorke 98/99":
         fig_cy.add_shape(type="rect", x0=60, y0=0, x1=120, y1=80,
                          line=dict(color="white", width=2), fillcolor="green", opacity=0.3)
         fig_cy.add_shape(type="rect", x0=103.5, y0=21.1, x1=120, y1=58.9,
-                         line=dict(color="white", width=2), fillcolor="none")
-        
+                         line=dict(color="white", width=2))
         for idx, shot in shots.iterrows():
             try:
                 import ast
