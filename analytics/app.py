@@ -187,7 +187,6 @@ elif page == "🎯 Mapa de Tiros":
     # Agregar tiros
     for idx, shot in shots.iterrows():
         if pd.notna(shot.get('location')):
-            # La ubicación viene como string "[x, y]"
             try:
                 import ast
                 location = ast.literal_eval(shot['location'])
@@ -288,7 +287,80 @@ elif page == "👥 Comparación de Equipos":
     pivot_table = event_by_team.pivot(index='type', columns='team', values='count').fillna(0).astype(int)
     st.dataframe(pivot_table, use_container_width=True)
 
-# Footer
+# ============================================
+# PÁGINA 5: COLE & YORKE 98/99
+# ============================================
+elif page == "👑 Cole & Yorke 98/99":
+    st.header("👑 La Dupla Legendaria: Andy Cole & Dwight Yorke (1998/1999)")
+    st.markdown("Protagonistas del Triplete del Manchester United. Datos históricos reconstruidos a nivel de evento.")
+    
+    # Cargar datos específicos
+    cy_file = data_dir / "cole_yorke_99_events.csv"
+    if cy_file.exists():
+        cy_df = pd.read_csv(cy_file)
+        
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.metric("Goles de Yorke", 18)
+        with col2:
+            st.metric("Goles de Cole", 17)
+        with col3:
+            st.metric("Pases entre ellos", len(cy_df[cy_df['type'] == 'Pass']))
+        
+        st.markdown("---")
+        st.subheader("🎯 Mapa de Tiros de la Dupla")
+        
+        # Filtrar solo tiros
+        shots = cy_df[cy_df['type'] == 'Shot']
+        
+        fig_cy = go.Figure()
+        
+        # Dibujar media cancha (ataque)
+        fig_cy.add_shape(type="rect", x0=60, y0=0, x1=120, y1=80,
+                         line=dict(color="white", width=2), fillcolor="green", opacity=0.3)
+        fig_cy.add_shape(type="rect", x0=103.5, y0=21.1, x1=120, y1=58.9,
+                         line=dict(color="white", width=2), fillcolor="none")
+        
+        for idx, shot in shots.iterrows():
+            try:
+                import ast
+                location = ast.literal_eval(shot['location'])
+                x, y = location[0], location[1]
+                color = '#FFD700' if shot['shot_outcome'] == 'Goal' else '#FF4444'
+                size = 12 if shot['shot_outcome'] == 'Goal' else 6
+                
+                fig_cy.add_trace(go.Scatter(
+                    x=[x], y=[y], mode='markers',
+                    marker=dict(size=size, color=color, symbol='circle', line=dict(color='black', width=1)),
+                    name=f"{shot['player']} - {shot['shot_outcome']}",
+                    hovertext=f"Jugador: {shot['player']}<br>Minuto: {shot['minute']}<br>Resultado: {shot['shot_outcome']}"
+                ))
+            except:
+                pass
+        
+        fig_cy.update_layout(
+            title='Ubicación de los 35 goles y tiros de Cole & Yorke',
+            xaxis=dict(range=[60, 120], showgrid=False, zeroline=False),
+            yaxis=dict(range=[0, 80], showgrid=False, zeroline=False),
+            plot_bgcolor='darkgreen',
+            height=500,
+            showlegend=True
+        )
+        st.plotly_chart(fig_cy, use_container_width=True)
+        
+        st.markdown("---")
+        st.subheader("🔗 Red de Pases entre la Dupla")
+        st.info("En esta reconstrucción, se simularon 80 combinaciones directas de pase entre ambos delanteros, reflejando su química en el último tercio de la cancha.")
+        
+        pass_df = cy_df[cy_df['type'] == 'Pass']
+        st.dataframe(pass_df[['minute', 'player', 'pass_recipient']].head(20), use_container_width=True)
+        
+    else:
+        st.warning("⚠️ No se encontró el archivo 'cole_yorke_99_events.csv'. Ejecuta primero el script de generación.")
+
+# ============================================
+# FOOTER (SIEMPRE AL FINAL)
+# ============================================
 st.markdown("---")
 st.markdown("""
 <div style='text-align: center; color: gray;'>
