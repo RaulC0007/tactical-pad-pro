@@ -370,7 +370,7 @@ elif page == "⚙️ Editor de Formaciones":
             st.markdown(f"- **{player['position']}**: {player['player']}")
 
 # ============================================
-# FOOTER
+# FOOTER (SIEMPRE AL FINAL)
 # ============================================
 st.markdown("---")
 st.markdown("""
