@@ -75,7 +75,7 @@ st.sidebar.info(f"""
 # ============================================
 def draw_pitch(fig, x0=0, y0=0, x1=120, y1=80, layer='below'):
     fig.add_shape(type="rect", x0=x0, y0=y0, x1=x1, y1=y1,
-                  line=dict(color="white", width=3), fillcolor="#1a472a", opacity=1,
+                  line=dict(color="white", width=3), fillcolor="rgba(26,71,42,0.9)",
                   layer=layer)
     mid_x = (x0 + x1) / 2
     fig.add_shape(type="line", x0=mid_x, y0=y0, x1=mid_x, y1=y1,
@@ -264,8 +264,8 @@ elif page == "👑 Cole & Yorke 98/99":
                 pass
         # DESPUÉS la cancha
         fig_cy.add_shape(type="rect", x0=60, y0=0, x1=120, y1=80,
-                         line=dict(color="white", width=3), fillcolor="#1a472a", opacity=1,
-                         layer='below')
+                 line=dict(color="white", width=3), fillcolor="rgba(26,71,42,0.9)",
+                 layer='below')
         fig_cy.add_shape(type="rect", x0=103.5, y0=21.1, x1=120, y1=58.9,
                          line=dict(color="white", width=2), layer='below')
         fig_cy.update_layout(
